@@ -48,7 +48,7 @@ function Metamask() {
           </figure>
           <div className="card-body">
             <div className="card-title font-bold justify-center">
-              Welcome web3 Adventurer !
+              Welcome Web3 Adventurer !
             </div>
             <div className="card-subtitle">Your account: {data.address}</div>
             <div className="">Your balance: {data.balance} ETH</div>
