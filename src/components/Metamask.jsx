@@ -81,6 +81,8 @@ function Metamask() {
         to: transactionData.to,
         value: ethers.utils.parseEther(transactionData.value),
       });
+      await response.wait();
+      alert("Transaction sent: " + response.hash);
     }
     if (transactionData.wallet === "custom") {
       const provider = new ethers.providers.JsonRpcProvider(
@@ -93,8 +95,8 @@ function Metamask() {
       });
       await response.wait();
       alert("Transaction sent: " + response.hash);
-      connectToMetamask();
     }
+    connectToMetamask();
   };
 
   const transactionOnchange = (e) => {
